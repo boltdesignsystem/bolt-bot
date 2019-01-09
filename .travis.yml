@@ -4,4 +4,4 @@ node_js:
 
 script:
   - npm test
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm i -g now && now deploy --token=$NOW_TOKEN && now alias --token=$NOW_TOKEN; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm i -g now && now deploy --token=$NOW_TOKEN --team=boltdesignsystem && now alias --token=$NOW_TOKEN --team=boltdesignsystem; fi

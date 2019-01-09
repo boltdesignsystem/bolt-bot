@@ -1,7 +1,6 @@
 {
   "version": 2,
   "alias": "bolt-bot",
-  "team": "boltdesignsystem",
   "builds": [
     {
       "src": "index.js",
