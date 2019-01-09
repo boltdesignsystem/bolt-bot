@@ -1,0 +1,6 @@
+{
+  "extends": "@basalt/eslint-config-base",
+  "rules": {
+    "camelcase": 0
+  }
+}
