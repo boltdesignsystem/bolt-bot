@@ -1,7 +1,10 @@
 language: node_js
 node_js:
 - '10'
+before_install:
+- openssl aes-256-cbc -K $encrypted_d290a453f15c_key -iv $encrypted_d290a453f15c_iv -in bolt-design-system-bot.private-key.pem.enc -out bolt-design-system-bot.private-key.pem -d
 
 script:
-  - npm test
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm i -g now && now deploy --token=$NOW_TOKEN --team=boltdesignsystem && now alias --token=$NOW_TOKEN --team=boltdesignsystem; fi
+- npm test
+- ls
+- if [ "$TRAVIS_BRANCH" = "master" ]; then npm i -g now && now deploy --token=$NOW_TOKEN --team=boltdesignsystem && now alias --token=$NOW_TOKEN --team=boltdesignsystem; fi
